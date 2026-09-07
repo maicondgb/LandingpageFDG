@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0B0F14">
+
+<title>Setembro Amarelo FDG | Programa corporativo de saúde mental para PMEs</title>
+<meta name="description" content="Palestras, workshops e rodas de conversa para o Setembro Amarelo da sua empresa. Conteúdo técnico e acolhedor, alinhado à NR-1 (riscos psicossociais). Online e presencial, sob medida para pequenas e médias empresas.">
+<link rel="canonical" href="https://www.exemplo.com.br/">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Setembro Amarelo FDG">
+<meta property="og:title" content="Setembro Amarelo FDG | Saúde mental corporativa para PMEs">
+<meta property="og:description" content="Um programa que engaja a equipe, prepara a liderança e coloca sua empresa em conformidade com a NR-1. Online e presencial.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta property="og:url" content="https://www.exemplo.com.br/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0F14'/%3E%3Cpath d='M20 44V20h18v5H26v5h10v5H26v9z' fill='%23F2B705'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#hero">Pular para o conteúdo</a>
+
+<!-- ═══════════════ BARRA DE URGÊNCIA ═══════════════ -->
+<div class="topbar" id="topbar">
+  <div class="topbar__inner">
+    <span class="topbar__dot" aria-hidden="true"></span>
+    <p class="topbar__text">
+      <strong>Agenda de setembro em fechamento.</strong>
+      <span class="topbar__hide-sm">Últimas datas disponíveis &mdash;</span>
+      encerra em <span class="topbar__count" id="topbar-countdown" aria-live="off">--d --h --m</span>
+    </p>
+    <a class="topbar__link" href="#contato">Consultar disponibilidade</a>
+  </div>
+</div>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a class="brand" href="#hero" aria-label="Setembro Amarelo FDG — início">
+      <span class="brand__mark" aria-hidden="true">FDG</span>
+      <span class="brand__text">
+        <span class="brand__name">Setembro Amarelo</span>
+        <span class="brand__sub">por FDG</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#contexto">O cenário</a></li>
+        <li><a class="nav__link" href="#solucoes">Soluções</a></li>
+        <li><a class="nav__link" href="#diferenciais">Diferenciais</a></li>
+        <li><a class="nav__link" href="#prova">Resultados</a></li>
+        <li><a class="nav__link" href="#faq">FAQ</a></li>
+      </ul>
+      <a class="btn btn--primary btn--sm nav__cta" href="#contato">Falar com especialista</a>
+    </nav>
+
+    <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="nav-backdrop" hidden></div>
+
+<main>
+
+<!-- ═══════════════ 1. HERO ═══════════════ -->
+<section class="hero" id="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap hero__grid">
+
+    <div class="hero__copy">
+      <p class="eyebrow eyebrow--light reveal">Setembro Amarelo 2026 &middot; Programa corporativo</p>
+
+      <h1 class="hero__title reveal" data-delay="1">
+        Saúde mental deixou de ser pauta de RH.<br>
+        Virou <em>obrigação legal</em> &mdash; e vantagem competitiva.
+      </h1>
+
+      <p class="hero__lead reveal" data-delay="2">
+        Palestras, workshops e rodas de conversa que engajam a equipe de verdade,
+        preparam a liderança para agir e sustentam a conformidade da sua empresa
+        com a <strong>NR-1 &mdash; Riscos Psicossociais</strong>. Desenhados para a
+        realidade de pequenas e médias empresas.
+      </p>
+
+      <div class="hero__actions reveal" data-delay="3">
+        <a class="btn btn--primary btn--lg" href="#contato">Consultar disponibilidade</a>
+        <a class="btn btn--ghost btn--lg" href="#solucoes">Ver formatos e escopo</a>
+      </div>
+
+      <ul class="hero__trust reveal" data-delay="4">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-shield"></use></svg> Alinhado à NR-1</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-screen"></use></svg> Online e presencial</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-doc"></use></svg> Nota fiscal e contrato</li>
+      </ul>
+    </div>
+
+    <div class="hero__visual reveal" data-delay="3">
+      <!-- SUBSTITUIR: foto do palestrante em evento corporativo (proporção 4:5, mín. 900x1125px) -->
+      <figure class="photo photo--hero">
+        <div class="photo__slot" role="img" aria-label="Foto do palestrante em evento corporativo">
+          <span class="photo__label">Foto &middot; palestrante em evento corporativo <em>(4:5)</em></span>
+        </div>
+      </figure>
+
+      <div class="hero__card">
+        <p class="hero__card-num"><span data-count="472" data-suffix=" mil">0</span></p>
+        <p class="hero__card-txt">afastamentos por transtornos mentais concedidos pelo INSS em um único ano no Brasil.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ 2. CONTEXTO E URGÊNCIA ═══════════════ -->
+<section class="section section--bone" id="contexto">
+  <div class="wrap">
+
+    <header class="sec-head reveal">
+      <p class="eyebrow">O cenário</p>
+      <h2 class="sec-title">O afastamento não avisa.<br>A fiscalização, <em>agora, também não.</em></h2>
+      <p class="sec-lead">
+        O adoecimento mental saiu das estatísticas e entrou na folha de pagamento:
+        atestados recorrentes, queda de produtividade, rotatividade e, desde a
+        atualização da NR-1, risco de autuação. Em empresas de pequeno e médio porte,
+        onde cada pessoa carrega uma função inteira, o impacto é proporcionalmente maior.
+      </p>
+    </header>
+
+    <div class="stats reveal" data-delay="1">
+      <div class="stat">
+        <p class="stat__num"><span data-count="472" data-suffix=" mil">0</span></p>
+        <p class="stat__label">afastamentos por transtornos mentais concedidos pelo INSS em 2024 &mdash; recorde histórico.</p>
+      </div>
+      <div class="stat">
+        <p class="stat__num"><span data-count="68" data-prefix="+" data-suffix="%">0</span></p>
+        <p class="stat__label">de crescimento nesses afastamentos em relação ao ano anterior.</p>
+      </div>
+      <div class="stat">
+        <p class="stat__num">R$ <span data-count="4">0</span></p>
+        <p class="stat__label">é o retorno estimado em produtividade para cada R$ 1 investido em saúde mental (OMS).</p>
+      </div>
+    </div>
+
+    <div class="alert reveal" data-delay="2">
+      <div class="alert__icon" aria-hidden="true"><svg class="ic ic--lg"><use href="#i-shield"></use></svg></div>
+      <div class="alert__body">
+        <p class="alert__tag">Norma Regulamentadora nº 1</p>
+        <h3 class="alert__title">Riscos psicossociais agora são item obrigatório do seu PGR.</h3>
+        <p class="alert__text">
+          A atualização da NR-1 incluiu os riscos psicossociais no Programa de Gerenciamento de Riscos.
+          Encerrado o período de orientação, a ausência de ações estruturadas de prevenção passa a
+          expor a empresa a autuação e a fortalecer eventuais ações trabalhistas. Um programa de
+          Setembro Amarelo bem documentado é <strong>evidência de ação preventiva</strong>.
+        </p>
+      </div>
+    </div>
+
+    <p class="pains-intro reveal" data-delay="3">Na prática, é isto que chega até você:</p>
+    <ul class="pains reveal" data-delay="3">
+      <li class="pain"><span class="pain__bar" aria-hidden="true"></span>Atestados curtos que se repetem e ninguém consegue explicar.</li>
+      <li class="pain"><span class="pain__bar" aria-hidden="true"></span>Líderes que percebem o sinal, mas não sabem o que dizer.</li>
+      <li class="pain"><span class="pain__bar" aria-hidden="true"></span>Turnover que consome o orçamento de contratação do ano.</li>
+      <li class="pain"><span class="pain__bar" aria-hidden="true"></span>Campanha de setembro que vira cartaz na parede e não muda nada.</li>
+    </ul>
+
+    <p class="note reveal">
+      Fontes: Ministério da Previdência Social (dados de benefícios por incapacidade, 2024);
+      Organização Mundial da Saúde; Portaria MTE que atualiza a NR-1.
+      <strong>Confirme os números vigentes antes da publicação.</strong>
+    </p>
+
+  </div>
+</section>
+
+<!-- ═══════════════ 3. SOLUÇÕES E FORMATOS ═══════════════ -->
+<section class="section" id="solucoes">
+  <div class="wrap">
+
+    <header class="sec-head sec-head--split reveal">
+      <div>
+        <p class="eyebrow">Soluções</p>
+        <h2 class="sec-title">Três formatos. Um <em>programa</em> coerente.</h2>
+      </div>
+      <p class="sec-lead sec-lead--right">
+        Você pode contratar uma ação isolada ou combinar os três em uma jornada de setembro.
+        Todo o conteúdo é adaptado ao seu setor, ao porte da equipe e à linguagem da sua empresa
+        antes do evento &mdash; sem palestra de prateleira.
+      </p>
+    </header>
+
+    <div class="cards">
+
+      <article class="card reveal" data-delay="1">
+        <p class="card__num">01</p>
+        <h3 class="card__title">Palestra Magna</h3>
+        <p class="card__for">Para todos os colaboradores &middot; 60 a 90 min</p>
+        <p class="card__text">
+          A abertura do seu Setembro Amarelo. Uma conversa direta sobre sofrimento psíquico,
+          sinais de alerta e pedido de ajuda &mdash; com profundidade técnica e zero
+          tom de autoajuda. Encerra com caminhos concretos de apoio dentro e fora da empresa.
+        </p>
+        <ul class="card__list">
+          <li>Auditório, refeitório ou transmissão ao vivo</li>
+          <li>Turmas a partir de 20 pessoas</li>
+          <li>Material de divulgação interna incluso</li>
+        </ul>
+        <a class="card__cta" href="#contato">Quero este formato <span aria-hidden="true">&rarr;</span></a>
+      </article>
+
+      <article class="card card--featured reveal" data-delay="2">
+        <p class="card__flag">Mais contratado por PMEs</p>
+        <p class="card__num">02</p>
+        <h3 class="card__title">Workshop para Lideranças</h3>
+        <p class="card__for">Gestores e sócios &middot; 2 a 3 h</p>
+        <p class="card__text">
+          Onde a mudança realmente acontece. Treinamos quem lidera para identificar sinais
+          precoces, conduzir uma conversa difícil sem invadir e encaminhar corretamente &mdash;
+          protegendo a pessoa e a empresa.
+        </p>
+        <ul class="card__list">
+          <li>Casos práticos do seu segmento</li>
+          <li>Roteiro de conversa e protocolo de encaminhamento</li>
+          <li>Insumos para o PGR e registro de ação preventiva</li>
+        </ul>
+        <a class="card__cta" href="#contato">Quero este formato <span aria-hidden="true">&rarr;</span></a>
+      </article>
+
+      <article class="card reveal" data-delay="3">
+        <p class="card__num">03</p>
+        <h3 class="card__title">Roda de Conversa</h3>
+        <p class="card__for">Grupos de até 25 pessoas &middot; 90 min</p>
+        <p class="card__text">
+          O espaço em que a equipe fala. Mediação profissional em ambiente seguro,
+          com escuta qualificada e devolutiva anônima e agregada para o RH &mdash;
+          um retrato honesto do clima, sem expor ninguém.
+        </p>
+        <ul class="card__list">
+          <li>Mediação por profissional habilitado</li>
+          <li>Sigilo garantido aos participantes</li>
+          <li>Relatório de percepções para o RH</li>
+        </ul>
+        <a class="card__cta" href="#contato">Quero este formato <span aria-hidden="true">&rarr;</span></a>
+      </article>
+
+    </div>
+
+    <div class="modes reveal" data-delay="1">
+      <div class="mode">
+        <svg class="ic ic--lg" aria-hidden="true"><use href="#i-pin"></use></svg>
+        <div>
+          <h4>Presencial</h4>
+          <p>Na sua sede ou em espaço externo. Deslocamento e logística combinados na proposta, sem surpresa depois.</p>
+        </div>
+      </div>
+      <div class="mode">
+        <svg class="ic ic--lg" aria-hidden="true"><use href="#i-screen"></use></svg>
+        <div>
+          <h4>Online ao vivo</h4>
+          <p>Na plataforma que sua empresa já usa. Interação em tempo real e opção de gravação para quem faltou.</p>
+        </div>
+      </div>
+      <div class="mode">
+        <svg class="ic ic--lg" aria-hidden="true"><use href="#i-layers"></use></svg>
+        <div>
+          <h4>Híbrido / multi-unidade</h4>
+          <p>Uma ação, várias filiais. Ideal para equipes distribuídas ou operações com turnos diferentes.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ 4. DIFERENCIAIS ═══════════════ -->
+<section class="section section--ink" id="diferenciais">
+  <div class="glow glow--top" aria-hidden="true"></div>
+  <div class="wrap">
+
+    <header class="sec-head reveal">
+      <p class="eyebrow eyebrow--light">Metodologia FDG</p>
+      <h2 class="sec-title sec-title--light">Não é motivacional.<br>É <em>técnico, acolhedor e mensurável.</em></h2>
+      <p class="sec-lead sec-lead--light">
+        O mercado está saturado de discurso genérico sobre positividade. Nossa entrega
+        parte de fundamentação clínica, respeita o tempo e a linguagem de quem escuta,
+        e devolve para o RH algo que se apresenta à diretoria.
+      </p>
+    </header>
+
+    <div class="pillars">
+      <article class="pillar reveal" data-delay="1">
+        <svg class="ic ic--xl" aria-hidden="true"><use href="#i-brain"></use></svg>
+        <h3>Abordagem técnica e acolhedora</h3>
+        <p>
+          Conteúdo com base clínica, traduzido para a linguagem do chão de fábrica,
+          do escritório e da liderança. Falamos de sofrimento sem romantizar e sem
+          assustar &mdash; o equilíbrio que faz a plateia baixar o celular.
+        </p>
+      </article>
+      <article class="pillar reveal" data-delay="2">
+        <svg class="ic ic--xl" aria-hidden="true"><use href="#i-chart"></use></svg>
+        <h3>Foco em engajamento real</h3>
+        <p>
+          Medimos presença, participação e percepção. Você recebe um relatório pós-evento
+          com indicadores e recomendações &mdash; material pronto para justificar o
+          investimento e planejar o próximo passo.
+        </p>
+      </article>
+      <article class="pillar reveal" data-delay="3">
+        <svg class="ic ic--xl" aria-hidden="true"><use href="#i-shield"></use></svg>
+        <h3>Alinhamento à NR-1 e ao ESG</h3>
+        <p>
+          Cada ação gera registro documental de prevenção de riscos psicossociais,
+          alimentando seu PGR e o pilar Social do ESG. Deixa de ser custo de campanha
+          e passa a ser mitigação de passivo.
+        </p>
+      </article>
+    </div>
+
+    <div class="steps reveal" data-delay="1">
+      <p class="steps__title">Como conduzimos, do primeiro contato ao relatório</p>
+      <ol class="steps__list">
+        <li class="stepx">
+          <span class="stepx__n">1</span>
+          <h4>Diagnóstico rápido</h4>
+          <p>Conversa de 30 minutos com o RH para entender contexto, porte e o que já foi tentado.</p>
+        </li>
+        <li class="stepx">
+          <span class="stepx__n">2</span>
+          <h4>Customização</h4>
+          <p>Adaptação de casos, exemplos e vocabulário ao seu setor e à sua cultura.</p>
+        </li>
+        <li class="stepx">
+          <span class="stepx__n">3</span>
+          <h4>Execução</h4>
+          <p>Condução do formato escolhido, online ou presencial, com suporte de divulgação interna.</p>
+        </li>
+        <li class="stepx">
+          <span class="stepx__n">4</span>
+          <h4>Relatório e próximos passos</h4>
+          <p>Indicadores do evento, percepções agregadas e recomendações para os próximos 12 meses.</p>
+        </li>
+      </ol>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ 5. PROVA SOCIAL ═══════════════ -->
+<section class="section section--bone" id="prova">
+  <div class="wrap">
+
+    <header class="sec-head sec-head--center reveal">
+      <p class="eyebrow">Confiança</p>
+      <h2 class="sec-title">Empresas que já fizeram a virada</h2>
+    </header>
+
+    <!-- SUBSTITUIR: logos reais de clientes (SVG ou PNG transparente, altura 40px) -->
+    <div class="marquee reveal" data-delay="1" aria-label="Empresas atendidas">
+      <div class="marquee__track" id="marquee-track">
+        <div class="marquee__group">
+          <span class="logo-slot">Logo cliente</span>
+          <span class="logo-slot">Logo cliente</span>
+          <span class="logo-slot">Logo cliente</span>
+          <span class="logo-slot">Logo cliente</span>
+          <span class="logo-slot">Logo cliente</span>
+          <span class="logo-slot">Logo cliente</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="quotes">
+      <!-- SUBSTITUIR: depoimentos reais (nome, cargo, empresa e foto opcional) -->
+      <figure class="quote reveal" data-delay="1">
+        <div class="quote__stars" aria-label="Avaliação 5 de 5">
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+        </div>
+        <blockquote>
+          <p>&ldquo;Foi a primeira ação de setembro em que ninguém saiu antes do fim.
+          A pauta continuou viva nas reuniões de equipe semanas depois.&rdquo;</p>
+        </blockquote>
+        <figcaption>
+          <span class="quote__avatar" aria-hidden="true"></span>
+          <span>
+            <strong>Nome do depoente</strong>
+            <em>Cargo &middot; Empresa &middot; 00 colaboradores</em>
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure class="quote reveal" data-delay="2">
+        <div class="quote__stars" aria-label="Avaliação 5 de 5">
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+        </div>
+        <blockquote>
+          <p>&ldquo;O workshop de liderança resolveu um problema antigo: os gestores sabiam
+          que algo estava errado, mas travavam na hora de conversar.&rdquo;</p>
+        </blockquote>
+        <figcaption>
+          <span class="quote__avatar" aria-hidden="true"></span>
+          <span>
+            <strong>Nome do depoente</strong>
+            <em>Cargo &middot; Empresa &middot; 00 colaboradores</em>
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure class="quote reveal" data-delay="3">
+        <div class="quote__stars" aria-label="Avaliação 5 de 5">
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+          <svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg>
+        </div>
+        <blockquote>
+          <p>&ldquo;O relatório final foi o que me permitiu levar o tema para a diretoria
+          com número, e não com impressão pessoal.&rdquo;</p>
+        </blockquote>
+        <figcaption>
+          <span class="quote__avatar" aria-hidden="true"></span>
+          <span>
+            <strong>Nome do depoente</strong>
+            <em>Cargo &middot; Empresa &middot; 00 colaboradores</em>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <p class="note note--center reveal">
+      Depoimentos ilustrativos, apenas para demonstração de layout.
+      <strong>Substituir por relatos reais e autorizados antes da publicação.</strong>
+    </p>
+
+  </div>
+</section>
+
+<!-- ═══════════════ 6. ESCASSEZ + FORMULÁRIO ═══════════════ -->
+<section class="section section--ink offer" id="contato">
+  <div class="glow glow--center" aria-hidden="true"></div>
+  <div class="wrap offer__grid">
+
+    <div class="offer__copy reveal">
+      <p class="eyebrow eyebrow--light">Agenda 2026</p>
+      <h2 class="sec-title sec-title--light">Setembro tem 30 dias.<br>E eles <em>não voltam.</em></h2>
+      <p class="sec-lead sec-lead--light">
+        Toda empresa quer a mesma semana. As datas de maior procura são as primeiras a fechar,
+        e a customização do conteúdo pede antecedência. Garanta a data da sua equipe agora &mdash;
+        a consulta de disponibilidade não tem custo nem compromisso.
+      </p>
+
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div class="countdown__unit"><span id="cd-d">--</span><small>dias</small></div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__unit"><span id="cd-h">--</span><small>horas</small></div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__unit"><span id="cd-m">--</span><small>min</small></div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__unit"><span id="cd-s">--</span><small>seg</small></div>
+      </div>
+      <p class="countdown__cap">Tempo restante da campanha de Setembro Amarelo deste ano.</p>
+
+      <ul class="offer__list">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"></use></svg> Resposta em até 1 dia útil</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"></use></svg> Proposta com escopo e valor fechados</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"></use></svg> Nota fiscal e contrato formal</li>
+      </ul>
+    </div>
+
+    <div class="form-card reveal" data-delay="1">
+      <h3 class="form-card__title">Consultar disponibilidade</h3>
+      <p class="form-card__sub">Leva menos de um minuto. Enviamos sua solicitação direto para o nosso WhatsApp comercial.</p>
+
+      <form class="form" id="lead-form" novalidate>
+        <div class="field">
+          <label for="f-nome">Seu nome <span aria-hidden="true">*</span></label>
+          <input type="text" id="f-nome" name="nome" autocomplete="name" required placeholder="Como podemos te chamar?">
+          <p class="field__err" data-err-for="f-nome"></p>
+        </div>
+
+        <div class="field">
+          <label for="f-empresa">Empresa <span aria-hidden="true">*</span></label>
+          <input type="text" id="f-empresa" name="empresa" autocomplete="organization" required placeholder="Razão social ou nome fantasia">
+          <p class="field__err" data-err-for="f-empresa"></p>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-email">E-mail corporativo <span aria-hidden="true">*</span></label>
+            <input type="email" id="f-email" name="email" autocomplete="email" required placeholder="voce@empresa.com.br">
+            <p class="field__err" data-err-for="f-email"></p>
+          </div>
+          <div class="field">
+            <label for="f-tel">WhatsApp <span aria-hidden="true">*</span></label>
+            <input type="tel" id="f-tel" name="telefone" autocomplete="tel" required inputmode="numeric" maxlength="15" placeholder="(00) 00000-0000">
+            <p class="field__err" data-err-for="f-tel"></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-porte">Tamanho da equipe <span aria-hidden="true">*</span></label>
+          <div class="select-wrap">
+            <select id="f-porte" name="porte" required>
+              <option value="" selected disabled>Selecione o porte da empresa</option>
+              <option>Até 50 colaboradores</option>
+              <option>De 51 a 200 colaboradores</option>
+              <option>De 201 a 500 colaboradores</option>
+              <option>Mais de 500 colaboradores</option>
+            </select>
+            <svg class="ic select-wrap__ic" aria-hidden="true"><use href="#i-chevron"></use></svg>
+          </div>
+          <p class="field__err" data-err-for="f-porte"></p>
+        </div>
+
+        <fieldset class="field field--chips">
+          <legend>Formato de interesse <small>(opcional, pode marcar mais de um)</small></legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="formato" value="Palestra Magna"><span>Palestra Magna</span></label>
+            <label class="chip"><input type="checkbox" name="formato" value="Workshop para Lideranças"><span>Workshop de Liderança</span></label>
+            <label class="chip"><input type="checkbox" name="formato" value="Roda de Conversa"><span>Roda de Conversa</span></label>
+            <label class="chip"><input type="checkbox" name="formato" value="Ainda não sei"><span>Ainda não sei</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="f-msg">Contexto <small>(opcional)</small></label>
+          <textarea id="f-msg" name="mensagem" rows="3" placeholder="Data pretendida, cidade, setor da empresa…"></textarea>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" id="f-lgpd" name="lgpd" required>
+          <span>Autorizo o contato comercial e o tratamento dos meus dados conforme a <a href="#" class="link">Política de Privacidade</a>. <span aria-hidden="true">*</span></span>
+        </label>
+        <p class="field__err" data-err-for="f-lgpd"></p>
+
+        <!-- honeypot anti-spam -->
+        <div class="hp" aria-hidden="true"><label>Não preencha<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+        <button class="btn btn--primary btn--lg btn--block" type="submit">
+          Enviar e falar com especialista
+        </button>
+        <p class="form__foot">
+          <svg class="ic" aria-hidden="true"><use href="#i-lock"></use></svg>
+          Sem spam. Sem lista de e-mail. Só o retorno da sua solicitação.
+        </p>
+        <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ 7. FAQ ═══════════════ -->
+<section class="section" id="faq">
+  <div class="wrap faq__grid">
+
+    <header class="sec-head reveal">
+      <p class="eyebrow">Perguntas frequentes</p>
+      <h2 class="sec-title">O que o RH costuma<br>perguntar <em>antes de fechar</em></h2>
+      <p class="sec-lead">Não achou sua dúvida? Mande no formulário &mdash; respondemos em até um dia útil.</p>
+      <a class="btn btn--dark" href="#contato">Fazer uma pergunta</a>
+    </header>
+
+    <div class="accordion reveal" data-delay="1" id="accordion">
+
+      <div class="acc">
+        <h3><button class="acc__head" type="button" aria-expanded="false" aria-controls="acc-1" id="acc-btn-1">
+          <span>Minha empresa tem menos de 50 pessoas. Faz sentido contratar?</span>
+          <svg class="ic acc__ic" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </button></h3>
+        <div class="acc__panel" id="acc-1" role="region" aria-labelledby="acc-btn-1">
+          <div class="acc__inner"><p>
+            Faz, e talvez mais do que em uma empresa grande. Em equipes enxutas, um único
+            afastamento redistribui trabalho para todo mundo e o efeito aparece no mês seguinte.
+            Além disso, a NR-1 não isenta pequenas e médias empresas da gestão de riscos
+            psicossociais. Temos formatos e turmas dimensionados para times a partir de 20 pessoas.
+          </p></div>
+        </div>
+      </div>
+
+      <div class="acc">
+        <h3><button class="acc__head" type="button" aria-expanded="false" aria-controls="acc-2" id="acc-btn-2">
+          <span>Quanto custa? Cabe no orçamento de uma PME?</span>
+          <svg class="ic acc__ic" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </button></h3>
+        <div class="acc__panel" id="acc-2" role="region" aria-labelledby="acc-btn-2">
+          <div class="acc__inner"><p>
+            O investimento varia conforme formato, duração, número de participantes e
+            modalidade (online ou presencial, com ou sem deslocamento). Justamente por isso
+            não trabalhamos com tabela fixa: você recebe uma proposta fechada, sem custo
+            surpresa, depois de uma conversa de 30 minutos. O formato online costuma ser
+            a porta de entrada mais acessível.
+          </p></div>
+        </div>
+      </div>
+
+      <div class="acc">
+        <h3><button class="acc__head" type="button" aria-expanded="false" aria-controls="acc-3" id="acc-btn-3">
+          <span>Vocês emitem nota fiscal e trabalham com contrato?</span>
+          <svg class="ic acc__ic" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </button></h3>
+        <div class="acc__panel" id="acc-3" role="region" aria-labelledby="acc-btn-3">
+          <div class="acc__inner"><p>
+            Sim. Emitimos nota fiscal de serviço e formalizamos contrato com escopo,
+            data, valor e condições de pagamento. Também fornecemos os documentos usuais
+            para cadastro de fornecedor no seu departamento financeiro.
+          </p></div>
+        </div>
+      </div>
+
+      <div class="acc">
+        <h3><button class="acc__head" type="button" aria-expanded="false" aria-controls="acc-4" id="acc-btn-4">
+          <span>Qual é a duração média de cada ação?</span>
+          <svg class="ic acc__ic" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </button></h3>
+        <div class="acc__panel" id="acc-4" role="region" aria-labelledby="acc-btn-4">
+          <div class="acc__inner"><p>
+            A Palestra Magna leva de 60 a 90 minutos, incluindo espaço para perguntas.
+            O Workshop para Lideranças ocupa de 2 a 3 horas. A Roda de Conversa dura
+            cerca de 90 minutos por grupo. Tudo pode ser ajustado à janela que a sua
+            operação consegue abrir &mdash; inclusive em horários de troca de turno.
+          </p></div>
+        </div>
+      </div>
+
+      <div class="acc">
+        <h3><button class="acc__head" type="button" aria-expanded="false" aria-controls="acc-5" id="acc-btn-5">
+          <span>O conteúdo é adaptável ao setor da minha empresa?</span>
+          <svg class="ic acc__ic" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </button></h3>
+        <div class="acc__panel" id="acc-5" role="region" aria-labelledby="acc-btn-5">
+          <div class="acc__inner"><p>
+            Sempre. Antes do evento fazemos um diagnóstico rápido com o RH para adequar
+            exemplos, vocabulário e casos práticos à sua realidade &mdash; indústria,
+            varejo, serviços, saúde, tecnologia ou logística. A diferença entre uma ação
+            que engaja e uma que não engaja costuma estar exatamente aí.
+          </p></div>
+        </div>
+      </div>
+
+      <div class="acc">
+        <h3><button class="acc__head" type="button" aria-expanded="false" aria-controls="acc-6" id="acc-btn-6">
+          <span>Como funciona a contratação, na prática?</span>
+          <svg class="ic acc__ic" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </button></h3>
+        <div class="acc__panel" id="acc-6" role="region" aria-labelledby="acc-btn-6">
+          <div class="acc__inner"><p>
+            São quatro passos: (1) você envia o formulário e retornamos para uma conversa
+            de 30 minutos; (2) enviamos proposta com escopo, data e valor; (3) aprovada a
+            proposta, assinamos contrato e reservamos a data na agenda; (4) executamos a
+            ação e entregamos o relatório pós-evento.
+          </p></div>
+        </div>
+      </div>
+
+      <div class="acc">
+        <h3><button class="acc__head" type="button" aria-expanded="false" aria-controls="acc-7" id="acc-btn-7">
+          <span>Isso ajuda mesmo na conformidade com a NR-1?</span>
+          <svg class="ic acc__ic" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </button></h3>
+        <div class="acc__panel" id="acc-7" role="region" aria-labelledby="acc-btn-7">
+          <div class="acc__inner"><p>
+            As ações geram registro documental de medidas preventivas relacionadas a riscos
+            psicossociais, que podem compor o seu PGR. Importante ser transparente: uma ação
+            de Setembro Amarelo é uma peça do conjunto, não substitui o levantamento de riscos
+            nem a assessoria jurídica e de SST da sua empresa. Entregamos a evidência da ação
+            preventiva para que o seu time a integre ao programa.
+          </p></div>
+        </div>
+      </div>
+
+      <div class="acc">
+        <h3><button class="acc__head" type="button" aria-expanded="false" aria-controls="acc-8" id="acc-btn-8">
+          <span>E se a data que eu quero já estiver ocupada?</span>
+          <svg class="ic acc__ic" aria-hidden="true"><use href="#i-plus"></use></svg>
+        </button></h3>
+        <div class="acc__panel" id="acc-8" role="region" aria-labelledby="acc-btn-8">
+          <div class="acc__inner"><p>
+            Oferecemos as datas mais próximas disponíveis e, quando faz sentido, o formato
+            online como alternativa para a semana desejada. Vale lembrar que a pauta não
+            precisa morrer em 30 de setembro &mdash; muitas empresas estendem o programa ao
+            longo do ano, o que costuma dar resultado melhor.
+          </p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA FINAL ═══════════════ -->
+<section class="cta-final">
+  <div class="wrap cta-final__inner reveal">
+    <div>
+      <h2>Sua equipe vai lembrar do setembro em que a empresa levou o assunto a sério.</h2>
+      <p>Consulte a disponibilidade da agenda. Sem custo, sem compromisso.</p>
+    </div>
+    <a class="btn btn--dark btn--lg" href="#contato">Consultar disponibilidade</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════ 8. RODAPÉ ═══════════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+
+      <div class="footer__brand">
+        <a class="brand brand--light" href="#hero">
+          <span class="brand__mark" aria-hidden="true">FDG</span>
+          <span class="brand__text">
+            <span class="brand__name">Setembro Amarelo</span>
+            <span class="brand__sub">por FDG</span>
+          </span>
+        </a>
+        <p class="footer__desc">
+          Programas corporativos de saúde mental para pequenas e médias empresas.
+          Conteúdo técnico, condução acolhedora e registro documental alinhado à NR-1.
+        </p>
+      </div>
+
+      <nav class="footer__col" aria-label="Navegação do rodapé">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#contexto">O cenário</a></li>
+          <li><a href="#solucoes">Soluções</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#prova">Resultados</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h3>Contato comercial</h3>
+        <!-- SUBSTITUIR: dados reais de contato -->
+        <ul>
+          <li><a href="mailto:comercial@empresa.com.br">comercial@empresa.com.br</a></li>
+          <li><a href="tel:+550000000000">(00) 00000-0000</a></li>
+          <li>Atendimento: seg. a sex., 9h &agrave;s 18h</li>
+          <li>Cidade &middot; UF</li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Institucional</h3>
+        <!-- SUBSTITUIR: CNPJ e links das políticas -->
+        <ul>
+          <li>Razão Social LTDA</li>
+          <li>CNPJ 00.000.000/0001-00</li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__crisis">
+      <svg class="ic ic--lg" aria-hidden="true"><use href="#i-heart"></use></svg>
+      <p>
+        <strong>Se você está passando por um momento difícil, ligue 188.</strong>
+        O <a href="https://www.cvv.org.br" target="_blank" rel="noopener">CVV</a> oferece
+        apoio emocional gratuito e sigiloso, 24 horas por dia. Em emergência, procure o
+        CAPS mais próximo ou ligue 192.
+      </p>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; <span id="year">2026</span> FDG. Todos os direitos reservados.</p>
+      <p>Este site tem finalidade informativa e comercial e não substitui atendimento psicológico ou psiquiátrico.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a class="wa" id="wa-float" href="#contato" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whats"></use></svg>
+  <span>Falar agora</span>
+</a>
+
+<!-- Voltar ao topo -->
+<button class="totop" id="totop" type="button" aria-label="Voltar ao topo">
+  <svg class="ic" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+
+<!-- ═══════════════ SPRITE DE ÍCONES ═══════════════ -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-3 8.2-7 9-4-.8-7-4.6-7-9V6l7-3z"/><path d="M9.5 12.2l1.8 1.8 3.4-3.6"/></symbol>
+  <symbol id="i-screen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 10-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+  <symbol id="i-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5A3 3 0 006.4 7 3 3 0 004 9.8a3 3 0 001 2.2 3 3 0 00.8 3.6A3 3 0 009 18.4a3 3 0 003 .6z"/><path d="M12 5.5A3 3 0 0117.6 7 3 3 0 0120 9.8a3 3 0 01-1 2.2 3 3 0 01-.8 3.6A3 3 0 0115 18.4a3 3 0 01-3 .6z"/><path d="M12 5.5V19"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M7 19v-6M12 19V6M17 19v-9"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10" width="15" height="10" rx="2"/><path d="M8 10V7.5a4 4 0 018 0V10"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.5 5.2 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-9.2A4 4 0 0112 8a4 4 0 017 2.8C19 15.6 12 20 12 20z"/></symbol>
+  <symbol id="i-whats" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 2a8 8 0 11-4.2 14.8l-.3-.2-3 .8.8-3-.2-.3A8 8 0 0112 4zm-3.5 4c-.2 0-.5.1-.8.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.2.7.5 0 1.6-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3l-2-1c-.3-.1-.5-.2-.7.1l-.7.9c-.1.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.5l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5l-.8-2c-.2-.5-.4-.5-.6-.5z"/></symbol>
+</svg>
+
+<!-- Dados estruturados -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.exemplo.com.br/#org",
+      "name": "Setembro Amarelo FDG",
+      "description": "Programas corporativos de saúde mental para pequenas e médias empresas.",
+      "areaServed": "BR"
+    },
+    {
+      "@type": "Service",
+      "name": "Programa corporativo de Setembro Amarelo",
+      "serviceType": "Palestras, workshops e rodas de conversa em saúde mental corporativa",
+      "provider": { "@id": "https://www.exemplo.com.br/#org" },
+      "audience": { "@type": "BusinessAudience", "name": "Pequenas e médias empresas" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Minha empresa tem menos de 50 pessoas. Faz sentido contratar?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Em equipes enxutas um único afastamento redistribui trabalho para toda a equipe, e a NR-1 não isenta pequenas e médias empresas da gestão de riscos psicossociais. Há formatos dimensionados para times a partir de 20 pessoas." } },
+        { "@type": "Question", "name": "Vocês emitem nota fiscal e trabalham com contrato?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Emitimos nota fiscal de serviço e formalizamos contrato com escopo, data, valor e condições de pagamento, além dos documentos para cadastro de fornecedor." } },
+        { "@type": "Question", "name": "Qual é a duração média de cada ação?", "acceptedAnswer": { "@type": "Answer", "text": "Palestra Magna de 60 a 90 minutos; Workshop para Lideranças de 2 a 3 horas; Roda de Conversa de cerca de 90 minutos por grupo, com ajuste à janela operacional da empresa." } },
+        { "@type": "Question", "name": "O conteúdo é adaptável ao setor da minha empresa?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Antes do evento é feito um diagnóstico com o RH para adequar exemplos, vocabulário e casos práticos ao setor e à cultura da empresa." } },
+        { "@type": "Question", "name": "Como funciona a contratação?", "acceptedAnswer": { "@type": "Answer", "text": "Envio do formulário e conversa de 30 minutos, proposta com escopo e valor, assinatura de contrato com reserva de data e execução com relatório pós-evento." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
