@@ -290,38 +290,71 @@ ul, ol { padding: 0; list-style: none; }
 .aviso { display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--claro-suave); }
 .aviso svg { width: 18px; height: 18px; color: var(--azul-300); }
 
-/* fotos sobre o disco */
+/* Dois retratos separados, cada um no seu disco, lado a lado e em
+   alturas diferentes. O quadro é 100 de largura por 84 de altura. */
 .hero__fotos {
   position: relative;
-  width: min(100%, 500px); aspect-ratio: 1;
-  margin-inline: auto;
+  width: min(100%, 560px); aspect-ratio: 1 / .84;
+  margin: 10% auto 0;
 }
-.hero__disco {
-  position: absolute; inset: 8%; border-radius: 50%;
+.retrato {
+  position: absolute; width: 50%; aspect-ratio: 1;
+  animation: boia 7s ease-in-out infinite alternate;
+}
+.retrato--ane { left: 0; top: 0; }
+.retrato--lucas { right: 0; top: 17%; animation-delay: -3.5s; }
+@keyframes boia { from { translate: 0 -5px; } to { translate: 0 7px; } }
+
+.retrato__disco {
+  position: absolute; inset: 0; border-radius: 50%;
   background: radial-gradient(circle at 34% 28%, var(--ceu) 0%, var(--azul-300) 28%, var(--azul-500) 60%, var(--azul-800) 100%);
-  box-shadow: 0 0 120px -10px rgba(96, 174, 236, .55);
-  animation: respira 6s ease-in-out infinite;
+  box-shadow: 0 0 90px -14px rgba(96, 174, 236, .6);
 }
-@keyframes respira { 50% { transform: scale(1.03); box-shadow: 0 0 150px 0 rgba(96, 174, 236, .6); } }
-.hero__anel {
-  position: absolute; inset: 1%; border-radius: 50%;
+.retrato--lucas .retrato__disco {
+  background: radial-gradient(circle at 66% 28%, var(--ceu) 0%, var(--azul-400) 30%, var(--azul-600) 62%, var(--azul-900) 100%);
+}
+/* anel tracejado girando em volta de cada disco */
+.retrato__disco::after {
+  content: ""; position: absolute; inset: -7%; border-radius: 50%;
   border: 1.5px dashed rgba(165, 220, 251, .35);
   animation: girar 50s linear infinite;
 }
-/* Recorte: retângulo em cima + meio-círculo embaixo, do mesmo tamanho
-   do disco. Caixa de 84% de largura por 122% de altura do quadro. */
-.hero__recorte {
-  position: absolute; top: -30%; left: 8%; right: 8%; bottom: 8%;
+.retrato--lucas .retrato__disco::after { animation-direction: reverse; }
+
+/* Recorte: retângulo em cima + meio-círculo embaixo do tamanho do disco,
+   para a cabeça sair por cima e o corpo acompanhar a curva. A caixa vai
+   22% acima do disco: altura total 122%, centro do círculo a 72%. */
+.retrato__recorte {
+  position: absolute; top: -22%; left: 0; right: 0; bottom: 0;
   -webkit-mask:
-    linear-gradient(#000, #000) top / 100% 65.6% no-repeat,
-    radial-gradient(closest-side, #000 99.4%, transparent 100%) bottom / 100% 68.9% no-repeat;
+    linear-gradient(#000, #000) top / 100% 59% no-repeat,
+    radial-gradient(closest-side, #000 99.4%, transparent 100%) bottom / 100% 81.97% no-repeat;
   mask:
-    linear-gradient(#000, #000) top / 100% 65.6% no-repeat,
-    radial-gradient(closest-side, #000 99.4%, transparent 100%) bottom / 100% 68.9% no-repeat;
+    linear-gradient(#000, #000) top / 100% 59% no-repeat,
+    radial-gradient(closest-side, #000 99.4%, transparent 100%) bottom / 100% 81.97% no-repeat;
 }
-.hero__foto { position: absolute; bottom: 0; filter: drop-shadow(0 10px 30px rgba(5, 14, 31, .45)); }
-.hero__foto--ane { left: -2%; width: 54%; z-index: 1; }
-.hero__foto--lucas { right: -4%; width: 60%; z-index: 2; }
+.retrato__recorte img { position: absolute; bottom: 0; filter: drop-shadow(0 10px 24px rgba(5, 14, 31, .45)); }
+.retrato--ane img { left: 13%; width: 74%; }
+.retrato--lucas img { left: 5%; width: 90%; }
+
+.retrato__nome {
+  position: absolute; left: 50%; bottom: -14px; z-index: 2;
+  translate: -50% 0;
+  padding: 8px 16px; border-radius: 14px;
+  background: rgba(8, 23, 47, .82);
+  border: 1px solid rgba(165, 220, 251, .3);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, .55);
+  text-align: center; white-space: nowrap;
+  font-size: 12px; line-height: 1.3; color: var(--claro-suave);
+}
+.retrato__nome b { display: block; font: 600 16px/1.2 var(--f-titulo); letter-spacing: .02em; color: #fff; }
+@media (max-width: 520px) {
+  .retrato__nome { padding: 6px 12px; font-size: 11px; }
+  .retrato__nome b { font-size: 14px; }
+}
+
+@keyframes respira { 50% { transform: scale(1.03); box-shadow: 0 0 150px 0 rgba(96, 174, 236, .6); } }
 
 .bolha {
   position: absolute; z-index: 3;
@@ -337,13 +370,15 @@ ul, ol { padding: 0; list-style: none; }
   content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 8px;
   border-radius: 50%; background: var(--ceu); vertical-align: 1px;
 }
-.bolha--1 { top: 14%; left: -4%; }
-.bolha--2 { top: 48%; right: -6%; animation-delay: -1.7s; }
-.bolha--3 { bottom: 6%; left: 4%; animation-delay: -3.2s; }
+/* as bolhas ocupam os vãos que a escada dos retratos deixa */
+.bolha--1 { top: -4%; right: 6%; }
+.bolha--2 { bottom: 0; left: 36%; animation-delay: -1.7s; }
+.bolha--3 { bottom: 14%; left: 2%; animation-delay: -3.2s; }
 @keyframes flutua { from { transform: translateY(-6px); } to { transform: translateY(8px); } }
 @media (max-width: 520px) {
-  .bolha { font-size: 12.5px; padding: 8px 12px; }
-  .bolha--1 { left: 0; } .bolha--2 { right: 0; }
+  .bolha { font-size: 12px; padding: 7px 11px; }
+  .bolha::before { width: 6px; height: 6px; margin-right: 6px; }
+  .bolha--1 { right: 2%; } .bolha--2 { left: 30%; } .bolha--3 { left: 0; }
 }
 
 .hero__rolar {
