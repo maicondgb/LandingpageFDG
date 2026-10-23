@@ -1,0 +1,359 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Inscrição Identidade Inabalável</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: faixa azul de capa → aviso da reunião → formulário em etapas numeradas (cartões) → resumo e envio pelo WhatsApp */
+:root{
+  --bg:#F4F6FB; --paper:#FFFFFF; --ink:#16203A; --muted:#58617A; --line:#D5DAE7;
+  --navy:#1B2A52; --navy-2:#2C3D6E; --gold:#E9A23B; --gold-ink:#8A5106; --gold-soft:#FCF0DB;
+  --focus:#2F6FD6; --ok:#136B60; --ok-soft:#E1F4F1; --err:#B4362D; --err-soft:#FBE6E4;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Nunito Sans","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1528; --paper:#172036; --ink:#E9ECF5; --muted:#A3ABC2; --line:#2E3A58;
+  --navy:#22325F; --navy-2:#30437A; --gold:#F2B451; --gold-ink:#F2B451; --gold-soft:#3A2E1A;
+  --focus:#6E9CF0; --ok:#4CC3B3; --ok-soft:#14332F; --err:#EE7A70; --err-soft:#3B1D1B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1528; --paper:#172036; --ink:#E9ECF5; --muted:#A3ABC2; --line:#2E3A58;
+  --navy:#22325F; --navy-2:#30437A; --gold:#F2B451; --gold-ink:#F2B451; --gold-soft:#3A2E1A;
+  --focus:#6E9CF0; --ok:#4CC3B3; --ok-soft:#14332F; --err:#EE7A70; --err-soft:#3B1D1B; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+h1,h2,h3{font-family:var(--display);line-height:1.12;margin:0;text-wrap:balance}
+p{margin:0}
+.hero{background:var(--navy);color:#fff;padding-inline:20px;padding-block:44px 34px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-110px;top:-110px;width:300px;height:300px;border-radius:50%;border:44px solid rgba(255,255,255,.07)}
+.hero-in{max-width:720px;margin:0 auto;display:grid;gap:12px;position:relative}
+.tag{font-family:var(--display);font-weight:600;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#C9D3EE}
+.hero h1{font-size:clamp(2.1rem,7vw,3.2rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 span{color:#F2B451}
+.hero p{color:#E3E8F7;max-width:52ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.facts span{font-size:.85rem;font-weight:700;padding:6px 12px;border-radius:99px;background:rgba(255,255,255,.12)}
+.wrap{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:20px 64px;display:grid;gap:16px}
+.notice{background:var(--gold-soft);border-radius:18px;padding:18px 20px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+.notice svg{width:28px;height:28px;color:var(--gold-ink);flex:none}
+.notice h2{font-size:1.1rem;margin-bottom:4px}
+.notice p{font-size:.95rem}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;display:grid;gap:16px}
+.card-h{display:flex;gap:12px;align-items:center}
+.num{font-family:var(--display);font-weight:800;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#F2B451;display:grid;place-items:center;flex:none}
+.card-h h2{font-size:1.25rem}
+.card-h p{font-size:.88rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.full{grid-column:1/-1}
+.field{display:grid;gap:6px;min-width:0}
+label,.lbl{font-weight:700;font-size:.92rem}
+.opt{font-weight:400;color:var(--muted);font-size:.85rem}
+input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{
+  width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;min-height:46px}
+textarea{min-height:90px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px color-mix(in srgb,var(--focus) 25%,transparent)}
+.choices{display:grid;gap:8px}
+.choices.two{grid-template-columns:1fr 1fr}
+.choice{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;cursor:pointer;background:var(--bg)}
+.choice input{margin-top:4px;accent-color:var(--navy);width:18px;height:18px;flex:none}
+.choice:has(input:checked){border-color:var(--gold);background:var(--gold-soft)}
+.choice:has(input:focus-visible){outline:3px solid color-mix(in srgb,var(--focus) 35%,transparent)}
+.choice b{display:block;font-size:.95rem}
+.choice small{display:block;color:var(--muted);font-size:.84rem}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pay .choice{flex-direction:column;gap:4px;padding:14px}
+.pay .choice .row{display:flex;gap:10px;align-items:center}
+.price{background:var(--navy);color:#fff;border-radius:14px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.price b{font-family:var(--display);font-size:1.7rem;color:#F2B451;font-variant-numeric:tabular-nums}
+.price span{font-size:.88rem;color:#D6DDF0}
+.err{color:var(--err);font-size:.84rem;font-weight:700;display:none}
+.field.invalid .err,.block.invalid .err{display:block}
+.field.invalid input,.field.invalid select{border-color:var(--err)}
+.block{display:grid;gap:8px}
+.hidden{display:none!important}
+.submit{display:grid;gap:10px}
+button,.btn{font:inherit;font-weight:800;font-size:1.02rem;border:none;border-radius:99px;padding:15px 22px;cursor:pointer;min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none}
+.primary{background:var(--navy);color:#fff}
+.primary:hover{background:var(--navy-2)}
+.wa{background:#1F8F5F;color:#fff}
+.wa:hover{background:#18784F}
+.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+button:focus-visible,.btn:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.fine{font-size:.84rem;color:var(--muted)}
+.summary{white-space:pre-wrap;font-size:.88rem;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px;max-height:280px;overflow:auto}
+.steps{display:grid;gap:10px;counter-reset:s}
+.steps li{list-style:none;display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s);width:32px;height:32px;border-radius:50%;background:var(--gold);color:#16203A;font-weight:800;display:grid;place-items:center;font-family:var(--display)}
+.steps{padding:0;margin:0}
+.done-h{display:flex;gap:12px;align-items:center}
+.done-h svg{width:34px;height:34px;color:var(--ok)}
+footer{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:0 40px;font-size:.82rem;color:var(--muted);text-align:center}
+@media (max-width:560px){.grid,.choices.two,.pay{grid-template-columns:1fr}.card{padding:16px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header class="hero">
+  <div class="hero-in">
+    <div class="tag">FDG · Ficha de inscrição</div>
+    <h1>Identidade <span>Inabalável</span></h1>
+    <p>Mentoria para adolescentes de 12 a 17 anos. Preencha os dados abaixo para garantir a vaga do seu filho.</p>
+    <div class="facts"><span>8 encontros presenciais</span><span>1x na semana</span><span>Até 2 adolescentes</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="notice" aria-labelledby="n-t">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    <div>
+      <h2 id="n-t">Antes do início, uma reunião com vocês</h2>
+      <p>Faremos uma reunião <b>online ou presencial</b>, como vocês preferirem, para entender a vida do adolescente: rotina, família, qualidades e dificuldades. Logo após a inscrição e o pagamento, entramos em contato para agendar.</p>
+    </div>
+  </section>
+
+  <form id="form" novalidate>
+  <div style="display:grid;gap:16px">
+
+    <section class="card" aria-labelledby="c1">
+      <div class="card-h"><span class="num">1</span><div><h2 id="c1">Responsável</h2><p>Quem está fazendo a inscrição</p></div></div>
+      <div class="grid">
+        <div class="field full"><label for="r_nome">Nome completo</label><input type="text" id="r_nome" autocomplete="name" required><span class="err">Informe o nome do responsável.</span></div>
+        <div class="field"><label for="r_par">Parentesco</label><select id="r_par" required><option value="">Selecione</option><option>Mãe</option><option>Pai</option><option>Avó / Avô</option><option>Outro responsável legal</option></select><span class="err">Selecione o parentesco.</span></div>
+        <div class="field"><label for="r_cpf">CPF <span class="opt">(para o contrato)</span></label><input type="text" id="r_cpf" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" required><span class="err">Informe um CPF válido.</span></div>
+        <div class="field"><label for="r_tel">WhatsApp</label><input type="tel" id="r_tel" autocomplete="tel" placeholder="(41) 99999-9999" required><span class="err">Informe um WhatsApp com DDD.</span></div>
+        <div class="field"><label for="r_email">E-mail</label><input type="email" id="r_email" autocomplete="email" required><span class="err">Informe um e-mail válido.</span></div>
+        <div class="field full"><label for="r_cidade">Cidade e bairro</label><input type="text" id="r_cidade" autocomplete="address-level2" required><span class="err">Informe a cidade.</span></div>
+        <div class="field"><label for="r2_nome">Segundo responsável <span class="opt">(opcional)</span></label><input type="text" id="r2_nome"></div>
+        <div class="field"><label for="r2_tel">WhatsApp do segundo responsável <span class="opt">(opcional)</span></label><input type="tel" id="r2_tel"></div>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="c2">
+      <div class="card-h"><span class="num">2</span><div><h2 id="c2">Adolescente</h2><p>Quem vai participar da mentoria</p></div></div>
+      <div class="grid">
+        <div class="field full"><label for="a_nome">Nome completo do adolescente</label><input type="text" id="a_nome" required><span class="err">Informe o nome do adolescente.</span></div>
+        <div class="field"><label for="a_nasc">Data de nascimento</label><input type="date" id="a_nasc" required><span class="err" id="a_nasc_err">Informe a data de nascimento.</span></div>
+        <div class="field"><label for="a_ano">Ano escolar</label><select id="a_ano" required><option value="">Selecione</option><option>6º ano</option><option>7º ano</option><option>8º ano</option><option>9º ano</option><option>1º ano do Ensino Médio</option><option>2º ano do Ensino Médio</option><option>3º ano do Ensino Médio</option><option>Outro</option></select><span class="err">Selecione o ano escolar.</span></div>
+        <div class="field full"><label for="a_escola">Escola</label><input type="text" id="a_escola" required><span class="err">Informe a escola.</span></div>
+        <div class="field full"><label for="a_mora">Com quem ele mora?</label><input type="text" id="a_mora" placeholder="Ex.: com a mãe e o irmão mais novo" required><span class="err">Conte com quem ele mora.</span></div>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="c3">
+      <div class="card-h"><span class="num">3</span><div><h2 id="c3">Formato</h2><p>A mentoria atende até 2 adolescentes por vez</p></div></div>
+      <div class="block" id="b_formato">
+        <div class="choices two" role="radiogroup" aria-label="Formato">
+          <label class="choice"><input type="radio" name="formato" value="Sozinho" required><span><b>Sozinho</b><small>Jornada só do meu filho</small></span></label>
+          <label class="choice"><input type="radio" name="formato" value="Com um amigo"><span><b>Com um amigo</b><small>Dois adolescentes juntos</small></span></label>
+        </div>
+        <span class="err">Escolha o formato.</span>
+      </div>
+      <div class="field hidden" id="f_amigo"><label for="amigo">Nome do amigo e contato do responsável dele</label><input type="text" id="amigo" placeholder="Ex.: Pedro, mãe Júlia (41) 99999-9999"><span class="fine">Cada família faz a sua própria inscrição.</span></div>
+      <div class="block" id="b_periodo">
+        <span class="lbl">Melhor período para os encontros</span>
+        <div class="choices two">
+          <label class="choice"><input type="checkbox" name="periodo" value="Manhã"><span><b>Manhã</b></span></label>
+          <label class="choice"><input type="checkbox" name="periodo" value="Tarde"><span><b>Tarde</b></span></label>
+          <label class="choice"><input type="checkbox" name="periodo" value="Início da noite"><span><b>Início da noite</b></span></label>
+          <label class="choice"><input type="checkbox" name="periodo" value="Flexível"><span><b>Flexível</b></span></label>
+        </div>
+        <span class="err">Escolha pelo menos um período.</span>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="c4">
+      <div class="card-h"><span class="num">4</span><div><h2 id="c4">Sobre o seu filho</h2><p>Uma prévia rápida. Vamos aprofundar na reunião.</p></div></div>
+      <div class="block">
+        <span class="lbl">O que mais motivou vocês a procurar a mentoria? <span class="opt">(marque quantos quiser)</span></span>
+        <div class="choices two">
+          <label class="choice"><input type="checkbox" name="motivo" value="Comunicação em casa"><span>Comunicação em casa</span></label>
+          <label class="choice"><input type="checkbox" name="motivo" value="Uso do celular e redes"><span>Uso do celular e redes</span></label>
+          <label class="choice"><input type="checkbox" name="motivo" value="Emoções e reações"><span>Emoções e reações</span></label>
+          <label class="choice"><input type="checkbox" name="motivo" value="Autoestima e confiança"><span>Autoestima e confiança</span></label>
+          <label class="choice"><input type="checkbox" name="motivo" value="Estudos e organização"><span>Estudos e organização</span></label>
+          <label class="choice"><input type="checkbox" name="motivo" value="Amizades e influências"><span>Amizades e influências</span></label>
+          <label class="choice"><input type="checkbox" name="motivo" value="Prevenção de vícios"><span>Prevenção de vícios</span></label>
+          <label class="choice"><input type="checkbox" name="motivo" value="Propósito e futuro"><span>Propósito e futuro</span></label>
+        </div>
+      </div>
+      <div class="field"><label for="obs">Quer contar algo sobre ele? <span class="opt">(opcional)</span></label><textarea id="obs" placeholder="Qualidades, desafios, o que vocês esperam da mentoria..."></textarea></div>
+      <div class="block" id="b_acomp">
+        <span class="lbl">Ele tem algum acompanhamento ou diagnóstico que devemos saber?</span>
+        <div class="choices two">
+          <label class="choice"><input type="radio" name="acomp" value="Não"><span><b>Não</b></span></label>
+          <label class="choice"><input type="radio" name="acomp" value="Sim, conversamos na reunião"><span><b>Sim</b><small>Detalhamos na reunião</small></span></label>
+        </div>
+        <span class="err">Responda esta pergunta.</span>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="c5">
+      <div class="card-h"><span class="num">5</span><div><h2 id="c5">Reunião com os pais</h2><p>Para conhecermos a vida do adolescente antes do início</p></div></div>
+      <div class="block" id="b_reuniao">
+        <span class="lbl">Como vocês preferem a reunião?</span>
+        <div class="choices two">
+          <label class="choice"><input type="radio" name="reuniao" value="Online"><span><b>Online</b><small>Por videochamada</small></span></label>
+          <label class="choice"><input type="radio" name="reuniao" value="Presencial"><span><b>Presencial</b><small>No nosso espaço</small></span></label>
+        </div>
+        <span class="err">Escolha online ou presencial.</span>
+      </div>
+      <div class="field"><label for="reu_hor">Melhores dias e horários para a reunião <span class="opt">(opcional)</span></label><input type="text" id="reu_hor" placeholder="Ex.: terça ou quinta à noite"></div>
+    </section>
+
+    <section class="card" aria-labelledby="c6">
+      <div class="card-h"><span class="num">6</span><div><h2 id="c6">Pagamento</h2><p>Escolha a forma que prefere</p></div></div>
+      <div class="price"><b>R$ 2.490</b><span>por adolescente · inclui a reunião com os pais, 8 encontros, relatórios, encontro em família, devolutiva final e kit</span></div>
+      <div class="block" id="b_pag">
+        <div class="pay">
+          <label class="choice"><span class="row"><input type="radio" name="pag" value="Pix à vista"><b>Pix à vista</b></span><small>R$ 2.490 em um pagamento</small></label>
+          <label class="choice"><span class="row"><input type="radio" name="pag" value="Cartão de crédito"><b>Cartão de crédito</b></span><small>Em até 12x (consulte a taxa de parcelamento)</small></label>
+        </div>
+        <span class="err">Escolha a forma de pagamento.</span>
+      </div>
+      <div class="field hidden" id="f_parc"><label for="parc">Em quantas vezes?</label><select id="parc"><option>1x</option><option>2x</option><option>3x</option><option>4x</option><option>5x</option><option>6x</option><option>7x</option><option>8x</option><option>9x</option><option>10x</option><option>11x</option><option>12x</option></select><span class="fine">Informaremos o valor final com a taxa antes do pagamento.</span></div>
+      <p class="fine">Você não paga nada neste formulário. Depois de enviar a inscrição, nossa equipe manda pelo WhatsApp a chave Pix ou o link seguro de pagamento com cartão.</p>
+    </section>
+
+    <section class="card" aria-labelledby="c7">
+      <div class="card-h"><span class="num">7</span><div><h2 id="c7">Para finalizar</h2></div></div>
+      <div class="field"><label for="origem">Como conheceu a mentoria?</label><select id="origem"><option value="">Selecione</option><option>Instagram</option><option>Indicação de amigos ou família</option><option>Escola</option><option>Igreja</option><option>Empresa ou palestra da FDG</option><option>Outro</option></select></div>
+      <div class="block" id="b_termos">
+        <label class="choice"><input type="checkbox" id="t1"><span>Estou ciente de que o Identidade Inabalável é uma mentoria educacional e de desenvolvimento pessoal e não substitui psicoterapia.</span></label>
+        <label class="choice"><input type="checkbox" id="t2"><span>Autorizo o uso dos dados informados apenas para a inscrição e o contato sobre a mentoria, conforme a LGPD.</span></label>
+        <span class="err">Marque as duas opções para continuar.</span>
+      </div>
+    </section>
+
+    <div class="submit">
+      <button type="submit" class="primary">Revisar e enviar inscrição</button>
+      <p class="fine" style="text-align:center">A inscrição é enviada para o WhatsApp da equipe Identidade Inabalável.</p>
+    </div>
+  </div>
+  </form>
+
+  <section class="card hidden" id="review" aria-labelledby="rv">
+    <div class="done-h">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
+      <div><h2 id="rv">Falta um toque</h2><p class="fine">Toque no botão verde para enviar a inscrição pelo WhatsApp.</p></div>
+    </div>
+    <a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20l1.3-5.2A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+      Enviar inscrição pelo WhatsApp
+    </a>
+    <div class="grid">
+      <button type="button" class="ghost" id="copyBtn">Copiar inscrição</button>
+      <button type="button" class="ghost" id="editBtn">Corrigir dados</button>
+    </div>
+    <p class="fine" id="copyMsg" aria-live="polite">Se o WhatsApp não abrir, copie a inscrição e envie para (41) 99530-9571.</p>
+    <div class="summary" id="summary" tabindex="0" aria-label="Resumo da inscrição"></div>
+    <h3 style="font-size:1.1rem">Próximos passos</h3>
+    <ol class="steps">
+      <li><span><b>Pagamento:</b> enviamos pelo WhatsApp a chave Pix ou o link de pagamento com cartão.</span></li>
+      <li><span><b>Reunião com os pais:</b> logo após o pagamento, entramos em contato para agendar a reunião online ou presencial.</span></li>
+      <li><span><b>Início da jornada:</b> combinamos o horário dos encontros e seu filho recebe o Kit Identidade Inabalável.</span></li>
+    </ol>
+  </section>
+</main>
+
+<footer>FDG · Identidade Inabalável · Mentoria educacional e de desenvolvimento pessoal. Não substitui psicoterapia. · Dúvidas: (41) 99530-9571</footer>
+
+<script>
+(function(){
+  var WA = "5541995309571";
+  var $ = function(id){return document.getElementById(id);};
+  var form = $("form");
+  function val(id){return ($(id).value||"").trim();}
+  function radio(n){var e=form.querySelector('input[name="'+n+'"]:checked');return e?e.value:"";}
+  function checks(n){return Array.prototype.map.call(form.querySelectorAll('input[name="'+n+'"]:checked'),function(e){return e.value;});}
+  function digits(s){return s.replace(/\D/g,"");}
+  function setInvalid(el,bad){var f=el.closest(".field")||el.closest(".block");if(f)f.classList.toggle("invalid",bad);}
+
+  $("r_cpf").addEventListener("input",function(e){var d=digits(e.target.value).slice(0,11);var o=d;if(d.length>9)o=d.slice(0,3)+"."+d.slice(3,6)+"."+d.slice(6,9)+"-"+d.slice(9);else if(d.length>6)o=d.slice(0,3)+"."+d.slice(3,6)+"."+d.slice(6);else if(d.length>3)o=d.slice(0,3)+"."+d.slice(3);e.target.value=o;});
+  form.addEventListener("change",function(e){
+    if(e.target.name==="formato")$("f_amigo").classList.toggle("hidden",radio("formato")!=="Com um amigo");
+    if(e.target.name==="pag")$("f_parc").classList.toggle("hidden",radio("pag")!=="Cartão de crédito");
+    var b=e.target.closest(".block");if(b)b.classList.remove("invalid");
+    var f=e.target.closest(".field");if(f)f.classList.remove("invalid");
+  });
+  form.addEventListener("input",function(e){var f=e.target.closest(".field");if(f)f.classList.remove("invalid");});
+
+  function cpfOk(c){c=digits(c);if(c.length!==11||/^(\d)\1+$/.test(c))return false;var s=0,r;for(var i=0;i<9;i++)s+=+c[i]*(10-i);r=(s*10)%11%10;if(r!==+c[9])return false;s=0;for(i=0;i<10;i++)s+=+c[i]*(11-i);r=(s*10)%11%10;return r===+c[10];}
+  function age(d){if(!d)return null;var b=new Date(d+"T12:00:00"),n=new Date();var a=n.getFullYear()-b.getFullYear();var m=n.getMonth()-b.getMonth();if(m<0||(m===0&&n.getDate()<b.getDate()))a--;return a;}
+
+  function validate(){
+    var first=null,ok=true;
+    function check(el,bad){setInvalid(el,bad);if(bad){ok=false;if(!first)first=el;}}
+    ["r_nome","r_cidade","a_nome","a_escola","a_mora"].forEach(function(id){check($(id),val(id).length<2);});
+    check($("r_par"),!val("r_par"));
+    check($("a_ano"),!val("a_ano"));
+    check($("r_cpf"),!cpfOk(val("r_cpf")));
+    check($("r_tel"),digits(val("r_tel")).length<10);
+    check($("r_email"),!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val("r_email")));
+    var a=age(val("a_nasc"));
+    $("a_nasc_err").textContent=!val("a_nasc")?"Informe a data de nascimento.":"A mentoria é para adolescentes de 12 a 17 anos.";
+    check($("a_nasc"),a===null||a<12||a>17);
+    function blk(id,bad){var b=$(id);b.classList.toggle("invalid",bad);if(bad){ok=false;if(!first)first=b;}}
+    blk("b_formato",!radio("formato"));
+    blk("b_periodo",checks("periodo").length===0);
+    blk("b_acomp",!radio("acomp"));
+    blk("b_reuniao",!radio("reuniao"));
+    blk("b_pag",!radio("pag"));
+    blk("b_termos",!($("t1").checked&&$("t2").checked));
+    if(first){first.scrollIntoView({behavior:"smooth",block:"center"});var fo=first.querySelector?first.querySelector("input,select")||first:first;try{fo.focus({preventScroll:true});}catch(e){}}
+    return ok;
+  }
+
+  function fmtDate(d){var p=d.split("-");return p[2]+"/"+p[1]+"/"+p[0];}
+  function buildText(){
+    var a=age(val("a_nasc"));
+    var pag=radio("pag")+(radio("pag")==="Cartão de crédito"?" em "+val("parc"):"");
+    var L=[];
+    L.push("*INSCRIÇÃO · IDENTIDADE INABALÁVEL*","");
+    L.push("*Responsável*");
+    L.push("Nome: "+val("r_nome")+" ("+val("r_par")+")");
+    L.push("CPF: "+val("r_cpf"));
+    L.push("WhatsApp: "+val("r_tel"));
+    L.push("E-mail: "+val("r_email"));
+    L.push("Cidade/bairro: "+val("r_cidade"));
+    if(val("r2_nome"))L.push("2º responsável: "+val("r2_nome")+(val("r2_tel")?" · "+val("r2_tel"):""));
+    L.push("","*Adolescente*");
+    L.push("Nome: "+val("a_nome"));
+    L.push("Nascimento: "+fmtDate(val("a_nasc"))+" ("+a+" anos)");
+    L.push("Ano escolar: "+val("a_ano")+" · Escola: "+val("a_escola"));
+    L.push("Mora com: "+val("a_mora"));
+    L.push("","*Formato*");
+    L.push(radio("formato")+(radio("formato")==="Com um amigo"&&val("amigo")?" · "+val("amigo"):""));
+    L.push("Períodos: "+checks("periodo").join(", "));
+    L.push("","*Sobre o adolescente*");
+    var m=checks("motivo");if(m.length)L.push("Motivos: "+m.join(", "));
+    if(val("obs"))L.push("Observações: "+val("obs"));
+    L.push("Acompanhamento/diagnóstico: "+radio("acomp"));
+    L.push("","*Reunião com os pais*");
+    L.push(radio("reuniao")+(val("reu_hor")?" · "+val("reu_hor"):""));
+    L.push("","*Pagamento*");
+    L.push(pag+" · R$ 2.490");
+    if(val("origem"))L.push("","Conheceu por: "+val("origem"));
+    L.push("","Ciente de que é mentoria e não psicoterapia: sim · Autoriza uso dos dados (LGPD): sim");
+    return L.join("\n");
+  }
+
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(!validate())return;
+    var t=buildText();
+    $("summary").textContent=t;
+    $("waBtn").href="https://wa.me/"+WA+"?text="+encodeURIComponent(t);
+    form.classList.add("hidden");
+    $("review").classList.remove("hidden");
+    $("review").scrollIntoView({behavior:"smooth",block:"start"});
+    $("waBtn").focus({preventScroll:true});
+  });
+  $("editBtn").addEventListener("click",function(){$("review").classList.add("hidden");form.classList.remove("hidden");form.scrollIntoView({behavior:"smooth"});});
+  $("copyBtn").addEventListener("click",function(){
+    var t=$("summary").textContent,msg=$("copyMsg");
+    function sel(){var r=document.createRange();r.selectNodeContents($("summary"));var s=window.getSelection();s.removeAllRanges();s.addRange(r);msg.textContent="Texto selecionado. Copie e envie para (41) 99530-9571.";}
+    try{navigator.clipboard.writeText(t).then(function(){msg.textContent="Inscrição copiada. Cole no WhatsApp (41) 99530-9571.";},sel);}catch(err){sel();}
+  });
+})();
+</script>
+
+</body></html>
