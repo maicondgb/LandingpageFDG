@@ -1,4 +1,8 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Inscrição Identidade Inabalável</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,23 +96,19 @@ footer{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:0 40px;fo
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 
+<style>body{margin:0}button:disabled{opacity:.7;cursor:wait}</style>
+</head>
+<body>
 <header class="hero">
   <div class="hero-in">
     <div class="tag">FDG · Ficha de inscrição</div>
     <h1>Identidade <span>Inabalável</span></h1>
-    <p>Mentoria para adolescentes de 12 a 17 anos. Preencha os dados abaixo para garantir a vaga do seu filho.</p>
-    <div class="facts"><span>8 encontros presenciais</span><span>1x na semana</span><span>Até 2 adolescentes</span></div>
+    <p>Mentoria para adolescentes e jovens de 13 a 19 anos. Preencha os dados abaixo para garantir a vaga do seu filho.</p>
+    <div class="facts"><span>8 encontros presenciais</span><span>1x na semana</span><span>Individual ou até 4 pessoas</span></div>
   </div>
 </header>
 
 <main class="wrap">
-  <section class="notice" aria-labelledby="n-t">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-    <div>
-      <h2 id="n-t">Antes do início, uma reunião com vocês</h2>
-      <p>Faremos uma reunião <b>online ou presencial</b>, como vocês preferirem, para entender a vida do adolescente: rotina, família, qualidades e dificuldades. Logo após a inscrição e o pagamento, entramos em contato para agendar.</p>
-    </div>
-  </section>
 
   <form id="form" novalidate>
   <div style="display:grid;gap:16px">
@@ -132,22 +132,22 @@ footer{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:0 40px;fo
       <div class="grid">
         <div class="field full"><label for="a_nome">Nome completo do adolescente</label><input type="text" id="a_nome" required><span class="err">Informe o nome do adolescente.</span></div>
         <div class="field"><label for="a_nasc">Data de nascimento</label><input type="date" id="a_nasc" required><span class="err" id="a_nasc_err">Informe a data de nascimento.</span></div>
-        <div class="field"><label for="a_ano">Ano escolar</label><select id="a_ano" required><option value="">Selecione</option><option>6º ano</option><option>7º ano</option><option>8º ano</option><option>9º ano</option><option>1º ano do Ensino Médio</option><option>2º ano do Ensino Médio</option><option>3º ano do Ensino Médio</option><option>Outro</option></select><span class="err">Selecione o ano escolar.</span></div>
-        <div class="field full"><label for="a_escola">Escola</label><input type="text" id="a_escola" required><span class="err">Informe a escola.</span></div>
+        <div class="field"><label for="a_ano">Ano escolar</label><select id="a_ano" required><option value="">Selecione</option><option>6º ano</option><option>7º ano</option><option>8º ano</option><option>9º ano</option><option>1º ano do Ensino Médio</option><option>2º ano do Ensino Médio</option><option>3º ano do Ensino Médio</option><option>Ensino Médio concluído</option><option>Ensino superior / técnico</option><option>Outro</option></select><span class="err">Selecione o ano escolar.</span></div>
+        <div class="field full"><label for="a_escola">Escola ou instituição</label><input type="text" id="a_escola" required><span class="err">Informe a escola.</span></div>
         <div class="field full"><label for="a_mora">Com quem ele mora?</label><input type="text" id="a_mora" placeholder="Ex.: com a mãe e o irmão mais novo" required><span class="err">Conte com quem ele mora.</span></div>
       </div>
     </section>
 
     <section class="card" aria-labelledby="c3">
-      <div class="card-h"><span class="num">3</span><div><h2 id="c3">Formato</h2><p>A mentoria atende até 2 adolescentes por vez</p></div></div>
+      <div class="card-h"><span class="num">3</span><div><h2 id="c3">Formato</h2><p>Individual ou em grupo de até 4 pessoas</p></div></div>
       <div class="block" id="b_formato">
         <div class="choices two" role="radiogroup" aria-label="Formato">
-          <label class="choice"><input type="radio" name="formato" value="Sozinho" required><span><b>Sozinho</b><small>Jornada só do meu filho</small></span></label>
-          <label class="choice"><input type="radio" name="formato" value="Com um amigo"><span><b>Com um amigo</b><small>Dois adolescentes juntos</small></span></label>
+          <label class="choice"><input type="radio" name="formato" value="Individual" required><span><b>Individual</b><small>Jornada só do meu filho</small></span></label>
+          <label class="choice"><input type="radio" name="formato" value="Em grupo"><span><b>Em grupo</b><small>Com amigos, até 4 pessoas</small></span></label>
         </div>
         <span class="err">Escolha o formato.</span>
       </div>
-      <div class="field hidden" id="f_amigo"><label for="amigo">Nome do amigo e contato do responsável dele</label><input type="text" id="amigo" placeholder="Ex.: Pedro, mãe Júlia (41) 99999-9999"><span class="fine">Cada família faz a sua própria inscrição.</span></div>
+      <div class="field hidden" id="f_amigo"><label for="amigo">Nomes dos amigos e contato dos responsáveis</label><textarea id="amigo" placeholder="Ex.: Pedro, mãe Júlia (41) 99999-9999; Ana, pai Carlos (41) 98888-8888"></textarea><span class="fine">Cada família faz a sua própria inscrição.</span></div>
       <div class="block" id="b_periodo">
         <span class="lbl">Melhor período para os encontros</span>
         <div class="choices two">
@@ -201,15 +201,15 @@ footer{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:0 40px;fo
 
     <section class="card" aria-labelledby="c6">
       <div class="card-h"><span class="num">6</span><div><h2 id="c6">Pagamento</h2><p>Escolha a forma que prefere</p></div></div>
-      <div class="price"><b>R$ 2.490</b><span>por adolescente · inclui a reunião com os pais, 8 encontros, relatórios, encontro em família, devolutiva final e kit</span></div>
+      <div class="price"><b>8x de R$ 311,25</b><span>por adolescente · inclui a reunião com os pais, 8 encontros, relatórios, encontro em família, devolutiva final e kit</span></div>
       <div class="block" id="b_pag">
         <div class="pay">
-          <label class="choice"><span class="row"><input type="radio" name="pag" value="Pix à vista"><b>Pix à vista</b></span><small>R$ 2.490 em um pagamento</small></label>
-          <label class="choice"><span class="row"><input type="radio" name="pag" value="Cartão de crédito"><b>Cartão de crédito</b></span><small>Em até 12x (consulte a taxa de parcelamento)</small></label>
+          <label class="choice"><span class="row"><input type="radio" name="pag" value="Pix à vista"><b>Pix à vista</b></span><small>Pagamento à vista</small></label>
+          <label class="choice"><span class="row"><input type="radio" name="pag" value="Cartão de crédito"><b>Cartão de crédito</b></span><small>Em até 8x de R$ 311,25</small></label>
         </div>
         <span class="err">Escolha a forma de pagamento.</span>
       </div>
-      <div class="field hidden" id="f_parc"><label for="parc">Em quantas vezes?</label><select id="parc"><option>1x</option><option>2x</option><option>3x</option><option>4x</option><option>5x</option><option>6x</option><option>7x</option><option>8x</option><option>9x</option><option>10x</option><option>11x</option><option>12x</option></select><span class="fine">Informaremos o valor final com a taxa antes do pagamento.</span></div>
+      <div class="field hidden" id="f_parc"><label for="parc">Em quantas vezes?</label><select id="parc"><option>1x</option><option>2x</option><option>3x</option><option>4x</option><option>5x</option><option>6x</option><option>7x</option><option>8x</option></select></div>
       <p class="fine">Você não paga nada neste formulário. Depois de enviar a inscrição, nossa equipe manda pelo WhatsApp a chave Pix ou o link seguro de pagamento com cartão.</p>
     </section>
 
@@ -223,9 +223,17 @@ footer{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:0 40px;fo
       </div>
     </section>
 
+    <section class="notice" aria-labelledby="n-t">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    <div>
+      <h2 id="n-t">Antes do início, uma reunião com vocês</h2>
+      <p>Faremos uma reunião <b>online ou presencial</b>, como vocês preferirem, para entender a vida do adolescente: rotina, família, qualidades e dificuldades. Logo após a inscrição e o pagamento, entramos em contato para agendar.</p>
+    </div>
+  </section>
+
     <div class="submit">
       <button type="submit" class="primary">Revisar e enviar inscrição</button>
-      <p class="fine" style="text-align:center">A inscrição é enviada para o WhatsApp da equipe Identidade Inabalável.</p>
+      <p class="fine" style="text-align:center">A inscrição é enviada para a equipe Identidade Inabalável.</p>
     </div>
   </div>
   </form>
@@ -233,17 +241,17 @@ footer{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:0 40px;fo
   <section class="card hidden" id="review" aria-labelledby="rv">
     <div class="done-h">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
-      <div><h2 id="rv">Falta um toque</h2><p class="fine">Toque no botão verde para enviar a inscrição pelo WhatsApp.</p></div>
+      <div><h2 id="rv">Inscrição recebida!</h2><p class="fine" id="rvSub"></p></div>
     </div>
     <a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20l1.3-5.2A8.4 8.4 0 1 1 21 11.5Z"/></svg>
-      Enviar inscrição pelo WhatsApp
+      Avisar pelo WhatsApp
     </a>
     <div class="grid">
       <button type="button" class="ghost" id="copyBtn">Copiar inscrição</button>
       <button type="button" class="ghost" id="editBtn">Corrigir dados</button>
     </div>
-    <p class="fine" id="copyMsg" aria-live="polite">Se o WhatsApp não abrir, copie a inscrição e envie para (41) 99530-9571.</p>
+    <p class="fine" id="copyMsg" aria-live="polite">Se precisar, copie a inscrição e envie para (41) 99530-9571.</p>
     <div class="summary" id="summary" tabindex="0" aria-label="Resumo da inscrição"></div>
     <h3 style="font-size:1.1rem">Próximos passos</h3>
     <ol class="steps">
@@ -269,7 +277,7 @@ footer{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:0 40px;fo
 
   $("r_cpf").addEventListener("input",function(e){var d=digits(e.target.value).slice(0,11);var o=d;if(d.length>9)o=d.slice(0,3)+"."+d.slice(3,6)+"."+d.slice(6,9)+"-"+d.slice(9);else if(d.length>6)o=d.slice(0,3)+"."+d.slice(3,6)+"."+d.slice(6);else if(d.length>3)o=d.slice(0,3)+"."+d.slice(3);e.target.value=o;});
   form.addEventListener("change",function(e){
-    if(e.target.name==="formato")$("f_amigo").classList.toggle("hidden",radio("formato")!=="Com um amigo");
+    if(e.target.name==="formato")$("f_amigo").classList.toggle("hidden",radio("formato")!=="Em grupo");
     if(e.target.name==="pag")$("f_parc").classList.toggle("hidden",radio("pag")!=="Cartão de crédito");
     var b=e.target.closest(".block");if(b)b.classList.remove("invalid");
     var f=e.target.closest(".field");if(f)f.classList.remove("invalid");
@@ -289,8 +297,8 @@ footer{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:0 40px;fo
     check($("r_tel"),digits(val("r_tel")).length<10);
     check($("r_email"),!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val("r_email")));
     var a=age(val("a_nasc"));
-    $("a_nasc_err").textContent=!val("a_nasc")?"Informe a data de nascimento.":"A mentoria é para adolescentes de 12 a 17 anos.";
-    check($("a_nasc"),a===null||a<12||a>17);
+    $("a_nasc_err").textContent=!val("a_nasc")?"Informe a data de nascimento.":"A mentoria é para jovens de 13 a 19 anos.";
+    check($("a_nasc"),a===null||a<13||a>19);
     function blk(id,bad){var b=$(id);b.classList.toggle("invalid",bad);if(bad){ok=false;if(!first)first=b;}}
     blk("b_formato",!radio("formato"));
     blk("b_periodo",checks("periodo").length===0);
@@ -321,7 +329,7 @@ footer{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:0 40px;fo
     L.push("Ano escolar: "+val("a_ano")+" · Escola: "+val("a_escola"));
     L.push("Mora com: "+val("a_mora"));
     L.push("","*Formato*");
-    L.push(radio("formato")+(radio("formato")==="Com um amigo"&&val("amigo")?" · "+val("amigo"):""));
+    L.push(radio("formato")+(radio("formato")==="Em grupo"&&val("amigo")?" · "+val("amigo"):""));
     L.push("Períodos: "+checks("periodo").join(", "));
     L.push("","*Sobre o adolescente*");
     var m=checks("motivo");if(m.length)L.push("Motivos: "+m.join(", "));
@@ -330,23 +338,42 @@ footer{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:0 40px;fo
     L.push("","*Reunião com os pais*");
     L.push(radio("reuniao")+(val("reu_hor")?" · "+val("reu_hor"):""));
     L.push("","*Pagamento*");
-    L.push(pag+" · R$ 2.490");
+    L.push(pag);
     if(val("origem"))L.push("","Conheceu por: "+val("origem"));
     L.push("","Ciente de que é mentoria e não psicoterapia: sim · Autoriza uso dos dados (LGPD): sim");
     return L.join("\n");
   }
 
+  var EMAIL = "anekallynec@gmail.com";
   form.addEventListener("submit",function(e){
     e.preventDefault();
     if(!validate())return;
     var t=buildText();
+    var btn=form.querySelector("button[type=submit]");
+    btn.disabled=true;btn.textContent="Enviando inscrição...";
+    var payload={
+      _subject:"Nova inscrição Identidade Inabalável: "+val("a_nome"),
+      _template:"box", _captcha:"false",
+      "Responsável":val("r_nome")+" ("+val("r_par")+")",
+      "CPF":val("r_cpf"),"WhatsApp":val("r_tel"),"email":val("r_email"),
+      "Adolescente":val("a_nome"),
+      "Inscrição completa":t
+    };
+    fetch("https://formsubmit.co/ajax/"+EMAIL,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(payload)})
+      .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)!=="true")throw new Error(j.message||"falha");});})
+      .then(function(){showDone(t,true);})
+      .catch(function(){showDone(t,false);});
+  });
+  function showDone(t,ok){
+    var btn=form.querySelector("button[type=submit]");btn.disabled=false;btn.textContent="Revisar e enviar inscrição";
     $("summary").textContent=t;
     $("waBtn").href="https://wa.me/"+WA+"?text="+encodeURIComponent(t);
+    $("rv").textContent=ok?"Inscrição recebida!":"Falta um toque";
+    $("rvSub").textContent=ok?"Recebemos seus dados por e-mail. Se quiser, avise também pelo WhatsApp.":"Não conseguimos enviar automaticamente. Toque no botão verde para enviar pelo WhatsApp.";
     form.classList.add("hidden");
     $("review").classList.remove("hidden");
     $("review").scrollIntoView({behavior:"smooth",block:"start"});
-    $("waBtn").focus({preventScroll:true});
-  });
+  }
   $("editBtn").addEventListener("click",function(){$("review").classList.add("hidden");form.classList.remove("hidden");form.scrollIntoView({behavior:"smooth"});});
   $("copyBtn").addEventListener("click",function(){
     var t=$("summary").textContent,msg=$("copyMsg");
@@ -356,4 +383,5 @@ footer{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:0 40px;fo
 })();
 </script>
 
-</body></html>
+</body>
+</html>
